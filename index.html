@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>IA Talks - Chatbot Professor de Inteligência Artificial</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #2C073A;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #E0B0FF;
+      position: relative;
+      display: inline-block;
+      background-image: linear-gradient(45deg, #E0B0FF, #AE63E4, #E0B0FF);
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: gradient 3s ease infinite;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #E0B0FF;
+    }
+
+    .sub-title {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+
+    .lamp {
+      fill: #AE63E4;
+      width: 40px;
+      height: 40px;
+      margin-right: 8px;
+      animation: pulse 2s infinite;
+    }
+
+    .title-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+      flex-direction: column;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background-color: #3C144A;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .info {
+      max-width: 400px;
+      text-align: left;
+      line-height: 1.6;
+    }
+
+    iframe {
+      border: 0;
+      border-radius: 4px;
+      margin: 0 1rem;
+    }
+
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const text = document.querySelector('h1');
+      text.innerHTML = text.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+      function animate() {
+        const letters = document.querySelectorAll('.letter');
+        letters.forEach((letter, index) => {
+          setTimeout(() => {
+            letter.style.opacity = '1';
+            letter.style.transform = 'translateY(0) rotate(0deg)';
+          }, 75 * index);
+        });
+      }
+      animate();
+      setInterval(animate, 2000);
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="title-container">
+      <svg class="lamp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12c0 1.33.26 2.61.74 3.77.1.24.26.45.45.65L12 22l8.8-5.58c.2-.2.36-.41.46-.65.48-1.16.74-2.44.74-3.77 0-5.52-4.48-10-10-10zm1 14h-2v-2h2v2zm-2-4h2V7h-2v5z"/>
+      </svg>
+      <h1>IA Talks</h1>
+      <h2 class="sub-title">Inteligência Artificial programada para ser professor</h2>
+    </div>
+    <div class="content">
+      <div class="card info">
+        <h2>Como usar nosso chatbot professor de inteligência artificial:</h2>
+        <p>1. Digite sua pergunta no campo de texto no chat.</p>
+        <p>2. Pressione Enter ou clique no botão Enviar para enviar sua pergunta.</p>
+        <p>3. Aguarde enquanto nosso chatbot processa sua pergunta e retorna
+        uma resposta relevante.</p>
+        <p>4. Continue a conversa fazendo mais perguntas ou solicite informações adicionais.</p>
+      </div>
+      <div style="height:600px; width:400px">
+        <iframe
+            src="https://ora.sh/embed/65af8f69-aaea-4bc7-a310-7458679c60b7"
+            width="100%"
+            height="100%"
+            style="border:0; border-radius: 4px"
+        ></iframe>
+      </div>
+    </div>
+    <footer>
+      <p>Desenvolvido por IA Talks</p>
+      <p>Entre em contato: iatalksbrasil@gmail.com</p>
+    </footer>
+  </div>
+</body>
+</html>
