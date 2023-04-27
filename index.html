@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IA Talks - Chatbot Professor de Inteligência Artificial</title>
   <style>
     body {
@@ -17,6 +18,31 @@
       min-height: 100vh;
     }
 
+    /* Navbar styles */
+    .navbar {
+      background-color: #3C144A;
+      width: 100%;
+      padding: 1rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: #E0B0FF;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      color: #AE63E4;
+    }
+
+    /* Container styles */
     .container {
       display: flex;
       flex-direction: column;
@@ -89,6 +115,20 @@
         background-position: 0% 50%;
       }
     }
+    
+    @media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+
+  .info {
+    text-align: center;
+  }
+}
 
     .content {
       display: flex;
@@ -118,9 +158,17 @@
       margin: 0 1rem;
     }
 
+    /* Footer styles */
     footer {
       margin-top: 2rem;
       text-align: center;
+      background-color: #3C144A;
+      padding: 1rem 0;
+      width: 100%;
+    }
+
+    footer p {
+      margin: 0.5rem 0;
     }
   </style>
   <script>
@@ -143,23 +191,41 @@
   </script>
 </head>
 <body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="https://iatalks.github.io/Homepageiatalks/">Início</a>
+  </nav>
+
   <div class="container">
     <div class="title-container">
       <svg class="lamp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path d="M12 2C6.48 2 2 6.48 2 12c0 1.33.26 2.61.74 3.77.1.24.26.45.45.65L12 22l8.8-5.58c.2-.2.36-.41.46-.65.48-1.16.74-2.44.74-3.77 0-5.52-4.48-10-10-10zm1 14h-2v-2h2v2zm-2-4h2V7h-2v5z"/>
       </svg>
       <h1>IA Talks</h1>
-      <h2 class="sub-title">Inteligência Artificial programada para ser professor</h2>
+      <h2 class="sub-title">Inteligência Artificial da IA Talks programada para ser o seu professor pessoal de IA</h2>
     </div>
-    <div class="content">
-      <div class="card info">
-        <h2>Como usar nosso chatbot professor de inteligência artificial:</h2>
-        <p>1. Digite sua pergunta no campo de texto no chat.</p>
-        <p>2. Pressione Enter ou clique no botão Enviar para enviar sua pergunta.</p>
-        <p>3. Aguarde enquanto nosso chatbot processa sua pergunta e retorna
-        uma resposta relevante.</p>
-        <p>4. Continue a conversa fazendo mais perguntas ou solicite informações adicionais.</p>
+    <div class="container">
+      <div class="title-container">
+        <!-- Seu código anterior aqui -->
       </div>
+      <div class="content">
+        <div class="card info">
+          <h2>Como usar nosso chatbot professor de inteligência artificial:</h2>
+          <p>1. Digite sua pergunta no campo de texto no chat.</p>
+          <p>2. Pressione Enter ou clique no botão Enviar para enviar sua pergunta.</p>
+          <p>3. Aguarde enquanto nosso chatbot processa sua pergunta e retorna
+          uma resposta relevante.</p>
+          <p>4. Continue a conversa fazendo mais perguntas ou solicite informações adicionais.</p>
+          
+          <h2>Exemplos de prompts básicos:</h2>
+          <ul>
+            <li>O que é inteligência artificial?</li>
+            <li>Como funciona o aprendizado de máquina?</li>
+            <li>Quais são as diferenças entre aprendizado supervisionado e não supervisionado?</li>
+            <li>O que é redes neurais?</li>
+            <li>Como posso começar a aprender sobre IA e tecnologia?</li>
+          </ul>
+        </div>
       <div style="height:600px; width:400px">
         <iframe
             src="https://ora.sh/embed/65af8f69-aaea-4bc7-a310-7458679c60b7"
@@ -169,6 +235,7 @@
         ></iframe>
       </div>
     </div>
+    <!-- Footer -->
     <footer>
       <p>Desenvolvido por IA Talks</p>
       <p>Entre em contato: iatalksbrasil@gmail.com</p>
@@ -176,3 +243,5 @@
   </div>
 </body>
 </html>
+
+
